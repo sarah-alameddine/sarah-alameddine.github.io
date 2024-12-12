@@ -4,7 +4,7 @@ const countdownToLom = () => {
     console.log("@ Date.now()",Date.now());
     
     const currentDate = new Date();
-    const lombokDate = new Date("Thu Dec 14 2024 20:09:50");
+    const lombokDate = new Date("Wed Jan 1 2025 20:09:50");
     console.log(currentDate);
     console.log(lombokDate);
     const lomMS = lombokDate.getTime() - currentDate.getTime();
