@@ -1,5 +1,125 @@
+body {
+    background-color: coral;
+}
+
 .header {
-    /* background-color: green; */
-    color: pink;
-    
+    color: black;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    font-size: 50px;
+}
+
+.animated {
+    animation: colourChange 4s infinite;
+}
+
+.countdown {
+    font-size: 40px;
+    color: rgb(162, 0, 0);
+}
+
+.time {
+    font-size: 10px;
+
+}
+.modak-regular {
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+@keyframes colourChange {
+    0% { color: rgb(0, 81, 255); }
+    25% { color: rgb(12, 197, 214); }
+    50% { color: rgb(0, 251, 255); }
+    75% { color: rgb(230, 0, 255); }
+    100% { color: rgb(162, 0, 255); }
+}
+
+h1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* h2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+} */
+
+.container {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    margin: 20px auto;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 150px; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure it stays on top of the GIF */
+}
+
+.toff {
+    left: 30%;
+}
+.others {
+    left: 80%;
+}
+.sarah {
+    left: 50%;
+    width: 70px;
+    top: 50%;
+}
+
+
+
+
+.countdownDiv {
+    display: flex; /* Arrange items horizontally */
+    justify-content: center; /* Center items in the row */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Add spacing between items */
+    padding: 20px;
+    font-size: 40px;
+}
+
+.countdownItem {
+    display: flex; /* Stack h2 and p vertically */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    color: rgb(162, 0, 0);
+    margin: 0;
+}
+
+.time {
+    font-size: 20px; /* Adjust font size for the labels */
+    color: rgb(88, 1, 1); /* Adjust the color as needed */
+    margin: 0;
+}
+
+.sentence {
+    color: blueviolet;
+    font-size: 15px; /* Adjust font size for the labels */
+
 }
