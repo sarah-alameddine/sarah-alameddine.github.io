@@ -7,7 +7,8 @@ body {
     margin: auto;
     width: 50%;
     padding: 10px;
-    font-size: 50px;
+    font-size: 60px;
+    text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.5); /* Subtle shadow for outline effect */
 }
 
 .animated {
@@ -16,7 +17,9 @@ body {
 
 .countdown {
     font-size: 40px;
-    color: rgb(162, 0, 0);
+    color: rgb(247, 63, 63);
+      -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .time {
@@ -121,5 +124,4 @@ h2 {
 .sentence {
     color: blueviolet;
     font-size: 15px; /* Adjust font size for the labels */
-
 }
