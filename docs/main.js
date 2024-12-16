@@ -55,7 +55,7 @@ function startCountdown(endTime) {
   }
 
   // Set the countdown date (example: 1 minute from now)
-  const lombokDate = new Date("Wed Jan 1 2025 00:00:50");
+  const lombokDate = new Date("Wed Jan 1 2025 10:00:00");
 
   const countdownDate = lombokDate.getTime() + 1 * 60 * 1000; // Change the duration as needed
   startCountdown(countdownDate);
