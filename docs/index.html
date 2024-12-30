@@ -1,67 +1,106 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Lombok Countdown</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Modak&family=Permanent+Marker&display=swap" rel="stylesheet">
-
-</head>
-<body>
-
-    <h1 class="header animated modak-regular">LOMBOK COUNTDOWN</h1>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Modak&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="header animated modak-regular" id="pageTitle">
+      LOMBOK COUNTDOWN
+    </h1>
     <div class="countdownDiv">
-        <div class="countdownItem permanent-marker-regular">
-            <h2 class="countdown" id="countdownDay">Loading...</h2>
-            <p class="time">days</p>
-        </div>
-        <div class="countdownItem permanent-marker-regular">
-            <h2 class="countdown" id="countdownHour">Loading...</h2>
-            <p class="time">hours</p>
-        </div>
-        <div class="countdownItem permanent-marker-regular">
-            <h2 class="countdown" id="countdownMin">Loading...</h2>
-            <p class="time">minutes</p>
-        </div>
-        <div class="countdownItem permanent-marker-regular">
-            <h2 class="countdown" id="countdownSec">Loading...</h2>
-            <p class="time">seconds</p>
-        </div>
+      <div class="countdown-item permanent-marker-regular">
+        <h2 class="countdown" id="countdownDay">0</h2>
+        <p class="time">days</p>
+      </div>
+      <div class="countdown-item permanent-marker-regular">
+        <h2 class="countdown" id="countdownHour">0</h2>
+        <p class="time">hours</p>
+      </div>
+      <div class="countdown-item permanent-marker-regular">
+        <h2 class="countdown" id="countdownMin">0</h2>
+        <p class="time">minutes</p>
+      </div>
+      <div class="countdown-item permanent-marker-regular">
+        <h2 class="countdown" id="countdownSec">0</h2>
+        <p class="time">seconds</p>
+      </div>
     </div>
-    
+    <div class="audioContainer hidden" id="button-container">
+      <button class="button" id="music-btn">Play Music</button>
+      <button class="button" id="audio-btn">Play Message</button>
+    </div>
 
+    <audio src="/src/audioMsg.m4a" id="audioMsg"></audio>
+    <audio src="/src/Nonstop.mp3" id="nonStop"></audio>
 
-    <h1 class=" sentence permanent-marker-regular">Till Sipping Ice Cold Redbull By Pool</h1>
+    <div class="fireworks hidden" id="fireworks-container"></div>
+
+    <h1 class="sentence permanent-marker-regular">
+      Till Sipping Ice Cold Redbull By Pool
+    </h1>
 
     <div class="container">
-        <!-- GIF -->
-        <div style="width:100%;height:0;padding-bottom:100%;position:relative;">
-            <img src="https://media.giphy.com/media/7OU1kM0s31mrqLCMJD/giphy.gif" 
-     alt="Beach GIF" 
-     style="width: 100%; height: auto; position: relative; z-index: 10; right: 20px;">
-        </div>
-        <!-- Overlay Image -->
-        <img src="toff.png" alt="toff" class="overlay-image toff">
-        <img src="./Lombok_Itinerary/sarah-Photoroom.png" alt="toff" class="overlay-image sarah">
+      <!-- GIF -->
+      <div
+        style="width: 100%; height: 0; padding-bottom: 100%; position: relative"
+      >
+        <img
+          src="https://media.giphy.com/media/7OU1kM0s31mrqLCMJD/giphy.gif"
+          alt="Beach GIF"
+          style="
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 10;
+            right: 20px;
+          "
+        />
+      </div>
+      <!-- Overlay Image -->
+      <img src="toff.png" alt="toff" class="overlay-image toff" />
+      <img
+        src="./Lombok_Itinerary/sarah-Photoroom.png"
+        alt="toff"
+        class="overlay-image sarah"
+      />
 
-        <img src="./Lombok_Itinerary/others-Photoroom.png" alt="toff" class="overlay-image others">
-
+      <img
+        src="./Lombok_Itinerary/others-Photoroom.png"
+        alt="toff"
+        class="overlay-image others"
+      />
     </div>
 
-    <h1 class="countdown permanent-marker-regular" >Travel Itinerary</h1>
-    
-    <img src="./Lombok_Itinerary/Lombok_Itinerary-2.png" alt="itinerary" width="100%" height="100%" >
-    <img src="./Lombok_Itinerary/Lombok_Itinerary-3.png" alt="itinerary" width="100%" height="100%" >
+    <h1 class="countdown permanent-marker-regular">Travel Itinerary</h1>
 
-    <!-- Add explosion on Day 0 -->
-    <!-- Add confetti -->
-    <h1 class="sentence permanent-marker-regular"> ✈️  &#x1F60A; pst pst</h1>
+    <img
+      src="./Lombok_Itinerary/Lombok_Itinerary-2.png"
+      alt="itinerary"
+      width="100%"
+      height="100%"
+    />
+    <img
+      src="./Lombok_Itinerary/Lombok_Itinerary-3.png"
+      alt="itinerary"
+      width="100%"
+      height="100%"
+    />
 
-    <script src="main.js"></script>
-</body>
+    <h1 class="sentence permanent-marker-regular">✈️ &#x1F60A; pst pst</h1>
+    <div class="center-container">
+      <button class="replay-button hidden" id="replayBtn">Replay Timer</button>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
 </html>

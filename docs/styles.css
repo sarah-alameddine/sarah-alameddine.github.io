@@ -1,127 +1,183 @@
 body {
-    background-color: coral;
+  background-color: coral;
+}
+
+h1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+h2 {
+  font-size: 40px;
+  color: rgb(162, 0, 0);
+  margin: 0;
 }
 
 .header {
-    color: black;
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-    font-size: 60px;
-    text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.5); /* Subtle shadow for outline effect */
+  color: black;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  font-size: 60px;
+  text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.5); /* Subtle shadow for outline effect */
 }
 
 .animated {
-    animation: colourChange 4s infinite;
+  animation: colourChange 4s infinite;
+}
+
+@keyframes colourChange {
+  0% {
+    color: rgb(0, 81, 255);
+  }
+  25% {
+    color: rgb(12, 197, 214);
+  }
+  50% {
+    color: rgb(0, 251, 255);
+  }
+  75% {
+    color: rgb(230, 0, 255);
+  }
+  100% {
+    color: rgb(162, 0, 255);
+  }
 }
 
 .countdown {
-    font-size: 40px;
-    color: rgb(247, 63, 63);
-      -webkit-text-stroke-width: 1px;
+  font-size: 40px;
+  color: rgb(247, 63, 63);
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
 
 .time {
-    font-size: 10px;
-
+  font-size: 10px;
 }
 .modak-regular {
-    font-family: "Modak", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .permanent-marker-regular {
-    font-family: "Permanent Marker", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-
-@keyframes colourChange {
-    0% { color: rgb(0, 81, 255); }
-    25% { color: rgb(12, 197, 214); }
-    50% { color: rgb(0, 251, 255); }
-    75% { color: rgb(230, 0, 255); }
-    100% { color: rgb(162, 0, 255); }
+  font-family: "Modak", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
-h1 {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
-
-/* h2 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-} */
 
 .container {
-    position: relative;
-    width: 300px; /* Adjust as needed */
-    height: 300px; /* Adjust as needed */
-    margin: 20px auto;
+  position: relative;
+  width: 300px; /* Adjust as needed */
+  height: 300px; /* Adjust as needed */
+  margin: 20px auto;
 }
 
 .overlay-image {
-    position: absolute;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    width: 150px; /* Adjust image size */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 1; /* Ensure it stays on top of the GIF */
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 150px; /* Adjust image size */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 1; /* Ensure it stays on top of the GIF */
 }
 
 .toff {
-    left: 30%;
+  left: 30%;
 }
 .others {
-    left: 80%;
+  left: 80%;
 }
 .sarah {
-    left: 50%;
-    width: 70px;
-    top: 50%;
+  left: 50%;
+  width: 70px;
+  top: 50%;
 }
 
+.fireworks {
+  position: absolute; /* Overlay relative to the nearest positioned parent */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the parent */
+  height: 100%; /* Full height of the parent */
+  z-index: 10; /* Higher than countdownDiv (default stacking is lower) */
+  pointer-events: none; /* Allow interaction with countdownDiv */
+}
 
+.hidden {
+  display: none;
+}
 
-
+.show {
+  display: flex;
+}
 .countdownDiv {
-    display: flex; /* Arrange items horizontally */
-    justify-content: center; /* Center items in the row */
-    align-items: center; /* Align items vertically */
-    gap: 20px; /* Add spacing between items */
-    padding: 20px;
-    font-size: 40px;
+  display: flex;
+  justify-content: center; /* Center items in the row */
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Add spacing between items */
+  padding: 20px;
+  font-size: 40px;
+  position: relative; /* Establish stacking context for the fireworks */
+  z-index: 1; /* Lower stacking order than fireworks */
 }
 
-.countdownItem {
-    display: flex; /* Stack h2 and p vertically */
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.audioContainer {
+  justify-content: center; /* Center items in the row */
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Add spacing between items */
+  padding: 20px;
+  font-size: 40px;
+  position: relative; /* Establish stacking context for the fireworks */
+  z-index: 1; /* Lower stacking order than fireworks */
 }
 
-h2 {
-    font-size: 40px;
-    color: rgb(162, 0, 0);
-    margin: 0;
+.countdown-item {
+  display: flex; /* Stack h2 and p vertically */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .time {
-    font-size: 20px; /* Adjust font size for the labels */
-    color: rgb(88, 1, 1); /* Adjust the color as needed */
-    margin: 0;
+  font-size: 20px; /* Adjust font size for the labels */
+  color: rgb(88, 1, 1); /* Adjust the color as needed */
+  margin: 0;
 }
 
 .sentence {
-    color: blueviolet;
-    font-size: 15px; /* Adjust font size for the labels */
+  color: blueviolet;
+  font-size: 15px; /* Adjust font size for the labels */
+}
+
+.button {
+  background-color: rgb(162, 0, 255);
+  border: 0.2px black;
+  color: white;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.replay-button {
+  background-color: rgb(162, 0, 255);
+  border: 0.2px black;
+  color: white;
+  padding: 6px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
 }
