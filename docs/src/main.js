@@ -6,10 +6,10 @@ import {
 } from "./countdownCalc.js";
 
 const appInit = () => {
-  const LombokCountdownDate = getCountdownDate(
-    new Date("Wed Jan 1 2025 09:30:00")
-  );
-  // const LombokCountdownDate =  getCountdownDate(new Date("Wed Dec 31 2024 9:30:00"));
+  // const LombokCountdownDate = getCountdownDate(
+  //   new Date("Wed Jan 1 2025 09:30:00")
+  // );
+  const LombokCountdownDate =  getCountdownDate(new Date("Wed Dec 31 2024 20:59:00"));
 
   let intervalID = startCountdown(LombokCountdownDate);
   const currentDate = new Date();
