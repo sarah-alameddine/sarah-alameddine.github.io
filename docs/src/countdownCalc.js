@@ -1,4 +1,3 @@
-import { Fireworks } from "fireworks-js";
 import.meta.hot;
 const countdownDay = document.getElementById("countdownDay");
 const countdownHour = document.getElementById("countdownHour");
@@ -6,7 +5,7 @@ const countdownMin = document.getElementById("countdownMin");
 const countdownSec = document.getElementById("countdownSec");
 
 const fireworksContainer = document.getElementById("fireworks-container");
-const fireworks = new Fireworks(fireworksContainer, {
+const fireworks = new Fireworks.default(fireworksContainer, {
   autoresize: true,
   opacity: 0.5,
   acceleration: 1.05,
